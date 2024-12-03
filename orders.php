@@ -1,6 +1,6 @@
 <?php include('db.php'); ?>
 
-<link rel="stylesheet" href="css/order.css">
+<link rel="stylesheet" href="css/orders.css">
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
         echo "<div class='order'>
                 <img src='{$row['product_image']}' alt='{$row['product_name']}'>
                 <h3>{$row['product_name']}</h3>
-                <form action='returns.php' method='POST'>
+                <form action='returns.php' method='GET'>
                     <input type='hidden' name='order_id' value='{$row['id']}'>
                     <button type='submit'>Initiate Return</button>
                 </form>
