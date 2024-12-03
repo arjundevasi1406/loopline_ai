@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $updateSql = "UPDATE orders SET return_image_path = '$returnImageTarget' WHERE id = '$orderId'";
             if ($conn->query($updateSql) === TRUE) {
                 echo "Return image uploaded and order updated successfully.";
-                header("Location: returns.php?result=Return image processed successfully!");
+                header("Location: returns.php?image_uploaded=true");
 
 
              
