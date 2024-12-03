@@ -2,6 +2,10 @@
 include 'db.php';
 $orderId = isset($_GET['order_id'])?
 intval($_GET['order_id']):0;
+
+$showRunModelDiv = isset($_GET['image_uploaded']) && $_GET['image_uploaded'] === 'true';
+?>
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +31,9 @@ intval($_GET['order_id']):0;
             </div>
         <?php endif; ?>
     </div>
-
+    
+    <?php if ($showRunModelDiv): ?>
+    
     <div class="container">
         <h1>Run AI Model</h1>
         <form method="POST">
