@@ -35,9 +35,9 @@ $showRunModelDiv = isset($_GET['image_uploaded']) && $_GET['image_uploaded'] ===
     <?php if ($showRunModelDiv): ?>
     
     <div class="container">
-        <h1>Run AI Model</h1>
+        <h1>Check Returns Status|Automated AI returns</h1>
         <form method="POST">
-            <button type="submit" name="runModel">Run AI Model</button>
+            <button type="submit" name="runModel">Return's Status</button>
         </form>
 
         <div class="result">
