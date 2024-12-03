@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
-$orderId = $_POST['orderId'];
-
+$orderId = isset($_GET['order_id'])?
+intval($_GET['order_id']):0;
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +50,11 @@ $orderId = $_POST['orderId'];
                 }
             }
             ?>
+        </div>
+    </div>
+
+</body>
+</html>
         </div>
     </div>
 
